@@ -207,6 +207,10 @@ expressions.filters.convertDateLocale = function(input, locale, style) {
         if (style === "full")
             options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
 
+	if (style === "single")
+       	    var options = { year: 'numeric', month: 'numeric', day: 'numeric'}
+
+
         return date.toLocaleDateString(locale, options)
 
     }
