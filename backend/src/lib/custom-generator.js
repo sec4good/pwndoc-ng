@@ -161,30 +161,50 @@ expressions.filters.convertDateRU = function(input, s) {
     }
 }
 
-// Colors the background of the "Business impact" / "Business dopad" cells: {@businessimpact | businessimpactColor}
-expressions.filters.businessimpactColor = function(input) {
-    // Prepare colors. Automatic color fetching is not possible because this function cannot be async.
-    var lowColorRemediationPriority = "ffffff";
-    var mediumColorRemediationPriority = "93c47d";
-    var highColorRemediationPriority = "ffd966";
-    var urgentColorRemediationPriority = "e06666";
+// Prepare colors. Automatic color fetching is not possible because this function cannot be async.
+var lowColorRemediationPriority = "ffffff";
+var mediumColorRemediationPriority = "93c47d";
+var highColorRemediationPriority = "ffd966";
+var urgentColorRemediationPriority = "e06666";
 
+// Colors the background of the "Business impact" / "Business dopad" cells in "Penetration test": {@businessimpact | businessimpactColor}
+expressions.filters.businessimpactColor = function(input) {
     switch (input) {
         case "Významný":
-	case "Significant":
-		return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + urgentColorRemediationPriority + '"/></w:tcPr>';
+        case "Significant":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + urgentColorRemediationPriority + '"/></w:tcPr>';
 
-	case "Střední":
-	case "Medium":
-		return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + highColorRemediationPriority + '"/></w:tcPr>';
+        case "Střední":
+        case "Medium":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + highColorRemediationPriority + '"/></w:tcPr>';
 
-	case "Drobný":
-	case "Minor":
-		return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + mediumColorRemediationPriority + '"/></w:tcPr>';
+        case "Drobný":
+        case "Minor":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + mediumColorRemediationPriority + '"/></w:tcPr>';
 
-	default:
-		return '';
-	}
+        default:
+                return '';
+        }
+}
+
+// Colors the background of the "Cost" / "Cena" cells in "Analýza bezpečnosti": {@cost | costColor}
+expressions.filters.costColor = function(input) {
+    switch (input) {
+        case "Vysoká":
+        case "High":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + urgentColorRemediationPriority + '"/></w:tcPr>';
+
+        case "Střední":
+        case "Medium":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + highColorRemediationPriority + '"/></w:tcPr>';
+
+        case "Nízká":
+        case "Low":
+                return '<w:tcPr><w:shd w:val="clear" w:color="auto" w:fill="' + mediumColorRemediationPriority + '"/></w:tcPr>';
+
+        default:
+                return '';
+        }
 }
 
 exports.expressions = expressions
