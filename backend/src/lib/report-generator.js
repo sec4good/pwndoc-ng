@@ -423,7 +423,7 @@ expressions.filters.p = function(input, style = null) {
         let style_parsed = style.replaceAll(' ', '');
         result += '<w:pPr><w:pStyle w:val="' + style_parsed + '"/></w:pPr>';
     }
-    result += '<w:r><w:t>' + input + '</w:t></w:r></w:p>';
+    result += '<w:r>' + input + '</w:r></w:p>';
 
     return result;
 }
