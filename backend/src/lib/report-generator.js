@@ -367,7 +367,6 @@ expressions.filters.linkTo = function(input, url) {
 <w:r><w:rPr><w:rStyle w:val="Hyperlink"/>
         <w:shd w:val="clear" w:color="auto" w:fill="auto"/> <!-- Remove any shading -->
         <w:u w:val="single"/> <!-- Add underline -->
-        <w:color w:val="0000FF"/> <!-- Set text color to blue -->
     </w:rPr><w:t>${entityencodedinput}</w:t></w:r><w:r><w:fldChar w:fldCharType="end"/>
 </w:r>`;
         
