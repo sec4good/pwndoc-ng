@@ -167,8 +167,8 @@ var mediumColorRemediationPriority = "93c47d";
 var highColorRemediationPriority = "ffd966";
 var urgentColorRemediationPriority = "e06666";
 
-// Colors the background of the "Business impact" / "Business dopad" cells in "Penetration test": {@businessimpact | businessimpactColor}
-expressions.filters.businessimpactColor = function(input) {
+// Colors the background of the "Business impact" / "Business dopad" cells in "Penetration test": {@business_impact | businessImpactColor}
+expressions.filters.businessImpactColor = function(input) {
     switch (input) {
         case "Významný":
         case "Significant":
