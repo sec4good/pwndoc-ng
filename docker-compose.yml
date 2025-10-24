@@ -38,7 +38,7 @@ services:
     container_name: pwndoc-ng-frontend
     restart: always
     ports:
-      - 8443:8443
+      - 0.0.0.0:8443:8443
     networks:
       - backend
 
