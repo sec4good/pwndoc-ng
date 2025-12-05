@@ -378,7 +378,7 @@ expressions.filters.linkTo = function(input, url) {
     <w:fldChar w:fldCharType="begin"/></w:r><w:r>
     <w:instrText xml:space="preserve"> HYPERLINK "${entityencodedurl}" </w:instrText>
 </w:r><w:r><w:fldChar w:fldCharType="separate"/></w:r>
-<w:r><w:rPr><w:rStyle w:val="PwndocLink"/>
+<w:r><w:rPr><w:rStyle w:val="Hyperlink"/>
         <w:shd w:val="clear" w:color="auto" w:fill="auto"/> <!-- Remove any shading -->
     </w:rPr><w:t>${entityencodedinput}</w:t></w:r><w:r><w:fldChar w:fldCharType="end"/>
 </w:r></w:p>`;
