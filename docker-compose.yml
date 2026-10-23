@@ -41,6 +41,9 @@ services:
       - 0.0.0.0:8443:8443
     networks:
       - backend
+    volumes:
+      - /etc/ssl/certs/pwndoc.crt:/etc/nginx/ssl/server.cert:ro,z
+      - /etc/ssl/private/pwndoc.key:/etc/nginx/ssl/server.key:ro,z
 
 volumes:
   mongo-data:
